@@ -1,44 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Photo Dashboard
 
-## Available Scripts
+## Starting guide:
 
-In the project directory, you can run:
+1. installing the packages.
 
-### `yarn start`
+```
+yarn install
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. run the project locally.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+yarn start
+```
 
-### `yarn test`
+## Included packages:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. [React](https://reactjs.org/) for building the interface.
+2. [Redux](https://redux.js.org/) for state management.
+3. [Redux toolkit](https://redux-toolkit.js.org/) for making redux simpler.
+4. [Typescript](https://www.typescriptlang.org/) for writing typed javascript.
+5. [Material UI](https://material-ui.com/) for build in UI element and style.
 
-### `yarn build`
+## Added features:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Instant change between pagination mode and infinite scroll mode.
+2. Album selection from specific values (valid values loaded from the API).
+3. Search by title.
+4. Compact view , for more dins view.
+5. Slide show for the current page.
+6. Alert If the API failed.
+7. Skeleton for not loaded yet photos.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### TODO
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Those are things I was wishing todo If I had more time:
 
-### `yarn eject`
+1. Make some components more generic for reusability (pagination component).
+2. App profiling and optimization.
+3. Adding 5 thumbnail images to the slide show.
+4. Adding more animation , just to feel the site more fluid.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Notes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The pagination and filtering should be happen in the BE, so In real APP, those actions should be called via Thunk or as an endpoint for RTK createAPI, I use them as normal actions just for better performance in this scenario

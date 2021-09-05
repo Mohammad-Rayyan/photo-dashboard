@@ -1,10 +1,14 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { photoApi } from "../features/dashboard/photoAPI";
+import photoDashboardReducer from "../features/dashboard/photoSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    photoDashboard: photoDashboardReducer,
+    [photoApi.reducerPath]: photoApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(photoApi.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;
