@@ -40,6 +40,7 @@ Those are things I was wishing todo If I had more time:
 2. App profiling and optimization.
 3. Adding 5 thumbnail images to the slide show.
 4. Adding more animation , just to feel the site more fluid.
+5. Adding some testing with coverage.
 
 ### Notes
 
